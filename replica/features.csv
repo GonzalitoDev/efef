@@ -1,0 +1,40 @@
+feature,area,priority,original,clone,notes
+"Vista semana con columna de horas y línea de ""ahora""",vistas,must,yes,yes,S01
+Vista día,vistas,must,yes,yes,S02
+"Vista mes con ""+N más"" en celdas llenas",vistas,must,yes,yes,S04
+Navegación anterior / siguiente / hoy,navegación,must,yes,yes,header
+Mini calendario para saltar a una fecha,navegación,must,yes,yes,S12
+Crear evento con clic o arrastre en un hueco (popover rápido),eventos,must,yes,yes,F01 S07
+Página de edición completa (título fechas ubicación descripción),eventos,must,yes,yes,S09
+Eventos de todo el día y multi-día,eventos,must,yes,yes,fila superior de S01
+Mover evento arrastrando,eventos,must,yes,yes,F03 snap a 15 min
+Cambiar duración arrastrando el borde,eventos,must,yes,yes,F03
+Borrar evento con deshacer,eventos,must,yes,yes,F06 S16
+Layout de eventos superpuestos,eventos,must,yes,yes,parte difícil
+Recurrencia con presets (diario semanal mensual anual días hábiles),recurrencia,must,yes,yes,F04
+Editar/borrar recurrente: este / siguientes / todos,recurrencia,must,yes,yes,F05 S11 excepciones
+Varios calendarios propios con color y mostrar/ocultar,calendarios,must,yes,yes,F08 S12
+Zona horaria del usuario con eventos guardados en UTC,ajustes,must,yes,partial,guarda UTC + zona IANA; muestra en la zona del navegador; falta selector de zona en ajustes
+Registro e inicio de sesión,cuenta,must,yes,no,fase 2: Supabase Auth (schema.sql listo)
+Recurrencia personalizada (cada N / posición en el mes / fin),recurrencia,should,yes,yes,S10 usar librería rrule
+Recordatorios por evento y por defecto del calendario,notificaciones,should,yes,partial,notificaciones del navegador con la pestaña abierta; email en fase 2
+Vista agenda (lista de próximos eventos),vistas,should,yes,yes,S06
+Vista 4 días / N días personalizada,vistas,should,yes,yes,S03
+Búsqueda de eventos,búsqueda,should,yes,yes,F09 S13
+Atajos de teclado (c e t j k g 1-5 / ? Supr z Esc),teclado,should,yes,yes,S15
+Color por evento,eventos,should,yes,yes,paleta propia
+Ajustes: primer día de semana / mostrar fines de semana / duración por defecto,ajustes,should,yes,yes,S14
+Ocupado / libre por evento,eventos,should,yes,yes,campo busy
+"Creación rápida con lenguaje natural (""almuerzo mañana 13hs"")",eventos,should,yes,no,parser propio o chrono-node
+Responsive / uso en celular,vistas,should,yes,yes,4 días por defecto en celular; arrastre táctil sin probar en dispositivo real
+Vista año,vistas,could,yes,no,S05
+Zona horaria secundaria en la columna de horas,ajustes,could,yes,no,
+Horario laboral sombreado,ajustes,could,yes,no,
+Importar / exportar .ics,datos,could,yes,no,formato estándar iCalendar
+Feriados desde un feed ICS público,calendarios,could,yes,no,reemplazo del calendario de feriados de Google
+Modo oscuro,vistas,could,yes,yes,
+Invitados y RSVP,compartir,skip,yes,skip,fuera del alcance elegido (fase 2)
+Calendarios compartidos con otros usuarios,compartir,skip,yes,skip,fuera del alcance elegido (fase 2)
+Eventos automáticos desde Gmail,integraciones,skip,yes,skip,depende de Gmail
+Google Meet en el evento,integraciones,skip,yes,skip,producto de Google
+Cumpleaños desde Google Contacts,calendarios,skip,yes,skip,datos de Google
